@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply font-sans text-slate-800 bg-slate-50 antialiased;
+    font-feature-settings: "ss01", "ss02";
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-sans text-slate-900;
+  }
+  code {
+    @apply font-mono text-sm;
+  }
+}
+
+@layer components {
+  .prose-lesson h1 {
+    @apply text-3xl font-bold mt-8 mb-4 text-slate-900;
+  }
+  .prose-lesson h2 {
+    @apply text-2xl font-bold mt-8 mb-3 text-slate-900 pb-2 border-b border-slate-200;
+  }
+  .prose-lesson h3 {
+    @apply text-xl font-semibold mt-6 mb-2 text-slate-900;
+  }
+  .prose-lesson p {
+    @apply text-slate-700 leading-relaxed mb-4;
+  }
+  .prose-lesson ul {
+    @apply list-disc list-inside mb-4 space-y-1 text-slate-700;
+  }
+  .prose-lesson ol {
+    @apply list-decimal list-inside mb-4 space-y-1 text-slate-700;
+  }
+  .prose-lesson li {
+    @apply leading-relaxed;
+  }
+  .prose-lesson a {
+    @apply text-brand-600 hover:text-brand-700 underline;
+  }
+  .prose-lesson code:not(pre code) {
+    @apply bg-slate-100 text-brand-700 px-1.5 py-0.5 rounded text-sm font-mono;
+  }
+  .prose-lesson pre {
+    @apply bg-slate-900 text-slate-100 p-4 rounded-lg overflow-x-auto mb-4 text-sm;
+  }
+  .prose-lesson blockquote {
+    @apply border-l-4 border-brand-400 bg-brand-50 pl-4 pr-4 py-2 my-4 italic text-slate-700;
+  }
+  .prose-lesson table {
+    @apply w-full border-collapse mb-4;
+  }
+  .prose-lesson th {
+    @apply bg-slate-100 border border-slate-300 px-3 py-2 text-left font-semibold;
+  }
+  .prose-lesson td {
+    @apply border border-slate-300 px-3 py-2;
+  }
+  .prose-lesson hr {
+    @apply my-6 border-slate-200;
+  }
+}
+
+/* Sandpack theme overrides */
+.sp-wrapper {
+  @apply rounded-lg overflow-hidden border border-slate-200;
+}
